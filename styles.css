@@ -86,8 +86,16 @@ body {
     padding: 16px;
   }
 
+  .scale-wrap {
+    width: 100vw;
+    height: 100vh;
+  }
+
   .frame {
     background: none;
+    width: 100vw;
+    height: 100vh;
+    transform: none;
   }
 
   .tick,
@@ -99,7 +107,7 @@ body {
     display: flex;
     position: absolute;
     left: 50%;
-    top: 120px;
+    top: 22vh;
     flex-direction: column;
     align-items: center;
     gap: 6px;
@@ -112,15 +120,16 @@ body {
     font-size: 12px;
     line-height: 12px;
     letter-spacing: -0.48px;
-    color: #ffffff;
-  }
-
-  .mobile-tick {
     color: #555555;
   }
 
+  .mobile-tick.on,
+  .mobile-tock.on {
+    color: #ffffff;
+  }
+
   .builder-gif {
-    top: 420px;
+    top: 58vh;
     width: 180px;
     height: 180px;
   }
