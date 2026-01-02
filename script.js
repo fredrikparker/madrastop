@@ -1,12 +1,23 @@
 const frameWidth = 1512;
 const frameHeight = 982;
 
+const mobileWidth = 393;
+const mobileHeight = 852;
+
 const setScale = () => {
   const isMobile = window.matchMedia("(max-width: 900px)").matches;
   const scale = isMobile
     ? 1
     : Math.min(window.innerWidth / frameWidth, window.innerHeight / frameHeight);
+  const mobileScale = Math.min(
+    window.innerWidth / mobileWidth,
+    window.innerHeight / mobileHeight
+  );
   document.documentElement.style.setProperty("--scale", scale.toFixed(4));
+  document.documentElement.style.setProperty(
+    "--mobile-scale",
+    mobileScale.toFixed(4)
+  );
 };
 
 const tick = document.querySelector(".tick");

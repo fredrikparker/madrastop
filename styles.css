@@ -4,6 +4,9 @@
   --frame-width: 1512px;
   --frame-height: 982px;
   --scale: 1;
+  --mobile-width: 393px;
+  --mobile-height: 852px;
+  --mobile-scale: 1;
 }
 
 * {
@@ -61,6 +64,7 @@ body {
   color: #ffffff;
 }
 
+.mobile-stage,
 .mobile-layout {
   display: none;
 }
@@ -110,24 +114,36 @@ body {
     display: none;
   }
 
-  .mobile-layout {
-    display: flex;
+  .mobile-stage {
+    display: block;
     position: absolute;
     left: 50%;
-    top: 32vh;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    transform: translateX(-50%);
+    top: 50%;
+    width: var(--mobile-width);
+    height: var(--mobile-height);
+    transform: translate(-50%, -50%);
+  }
+
+  .mobile-layout {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--mobile-width);
+    height: var(--mobile-height);
+    transform: scale(var(--mobile-scale));
+    transform-origin: top left;
   }
 
   .mobile-tick,
   .mobile-tock {
     font-family: "Press Start 2P", monospace;
-    font-size: clamp(12px, 3.6vw, 16px);
-    line-height: 1;
+    font-size: 12px;
+    line-height: 12px;
     letter-spacing: -0.48px;
     color: #555555;
+    position: absolute;
+    left: 174px;
   }
 
   .mobile-tick.on,
@@ -135,13 +151,31 @@ body {
     color: #ffffff;
   }
 
+  .mobile-tick {
+    top: 276px;
+  }
+
+  .mobile-tock {
+    top: 292px;
+  }
+
   .logo-img {
-    width: min(78vw, 360px);
+    width: 203px;
+    position: absolute;
+    left: 95px;
+    top: 335px;
   }
 
   .builder-img {
-    top: 78vh;
-    width: min(18vw, 72px);
+    display: none;
+  }
+
+  .mobile-builder {
+    position: absolute;
+    left: 178px;
+    top: 700px;
+    width: 36px;
     height: auto;
+    image-rendering: pixelated;
   }
 }
