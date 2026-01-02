@@ -82,19 +82,26 @@ body {
 }
 
 @media (max-width: 900px) {
+  html,
+  body {
+    height: 100%;
+    overflow: hidden;
+  }
+
   .viewport {
     padding: 16px;
+    height: 100dvh;
   }
 
   .scale-wrap {
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
   }
 
   .frame {
     background: none;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     transform: none;
   }
 
@@ -107,7 +114,7 @@ body {
     display: flex;
     position: absolute;
     left: 50%;
-    top: 18vh;
+    top: 32vh;
     flex-direction: column;
     align-items: center;
     gap: 8px;
@@ -129,12 +136,12 @@ body {
   }
 
   .logo-img {
-    width: min(82vw, 380px);
+    width: min(78vw, 360px);
   }
 
   .builder-img {
-    top: 55vh;
-    width: min(72vw, 300px);
+    top: 78vh;
+    width: min(18vw, 72px);
     height: auto;
   }
 }
