@@ -61,8 +61,67 @@ body {
   color: #ffffff;
 }
 
-@media (max-width: 900px) {
+.mobile-layout {
+  display: none;
+}
+
+.logo-img {
+  width: 240px;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.builder-gif {
+  position: absolute;
+  left: 50%;
+  top: 600px;
+  width: 256px;
+  height: 256px;
+  transform: translateX(-50%);
+  image-rendering: pixelated;
+}
+
+@media (max-width: 600px) {
   .viewport {
     padding: 16px;
+  }
+
+  .frame {
+    background: none;
+  }
+
+  .tick,
+  .tock {
+    display: none;
+  }
+
+  .mobile-layout {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 120px;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    transform: translateX(-50%);
+  }
+
+  .mobile-tick,
+  .mobile-tock {
+    font-family: "Press Start 2P", monospace;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -0.48px;
+    color: #ffffff;
+  }
+
+  .mobile-tick {
+    color: #555555;
+  }
+
+  .builder-gif {
+    top: 420px;
+    width: 180px;
+    height: 180px;
   }
 }
