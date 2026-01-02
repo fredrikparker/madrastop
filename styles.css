@@ -66,12 +66,12 @@ body {
 }
 
 .logo-img {
-  width: 240px;
+  width: 260px;
   height: auto;
   image-rendering: pixelated;
 }
 
-.builder-gif {
+.builder-img {
   position: absolute;
   left: 50%;
   top: 600px;
@@ -128,9 +128,13 @@ body {
     color: #ffffff;
   }
 
-  .builder-gif {
+  .logo-img {
+    width: min(70vw, 340px);
+  }
+
+  .builder-img {
     top: 58vh;
-    width: 180px;
-    height: 180px;
+    width: min(60vw, 240px);
+    height: auto;
   }
 }
