@@ -2,7 +2,7 @@ const frameWidth = 1512;
 const frameHeight = 982;
 
 const setScale = () => {
-  const isMobile = window.matchMedia("(max-width: 600px)").matches;
+  const isMobile = window.matchMedia("(max-width: 900px)").matches;
   const scale = isMobile
     ? 1
     : Math.min(window.innerWidth / frameWidth, window.innerHeight / frameHeight);

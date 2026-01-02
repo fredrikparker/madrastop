@@ -81,7 +81,7 @@ body {
   image-rendering: pixelated;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .viewport {
     padding: 16px;
   }
@@ -107,18 +107,18 @@ body {
     display: flex;
     position: absolute;
     left: 50%;
-    top: 22vh;
+    top: 18vh;
     flex-direction: column;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     transform: translateX(-50%);
   }
 
   .mobile-tick,
   .mobile-tock {
     font-family: "Press Start 2P", monospace;
-    font-size: 12px;
-    line-height: 12px;
+    font-size: clamp(12px, 3.6vw, 16px);
+    line-height: 1;
     letter-spacing: -0.48px;
     color: #555555;
   }
@@ -129,12 +129,12 @@ body {
   }
 
   .logo-img {
-    width: min(70vw, 340px);
+    width: min(82vw, 380px);
   }
 
   .builder-img {
-    top: 58vh;
-    width: min(60vw, 240px);
+    top: 55vh;
+    width: min(72vw, 300px);
     height: auto;
   }
 }
