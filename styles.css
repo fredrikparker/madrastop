@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+:root {
+  --frame-width: 1512px;
+  --frame-height: 982px;
+  --scale: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #1e1e1e;
+  min-height: 100vh;
+}
+
+.viewport {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.scale-wrap {
+  width: calc(var(--frame-width) * var(--scale));
+  height: calc(var(--frame-height) * var(--scale));
+}
+
+.frame {
+  width: var(--frame-width);
+  height: var(--frame-height);
+  background: url("frame.png") no-repeat 0 0 / 100% 100%;
+  transform: scale(var(--scale));
+  transform-origin: top left;
+  position: relative;
+}
+
+.tick,
+.tock {
+  position: absolute;
+  left: 733px;
+  font-family: "Press Start 2P", monospace;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: -0.48px;
+  color: #555555;
+}
+
+.tick {
+  top: 378px;
+}
+
+.tock {
+  top: 394px;
+}
+
+.tick.on,
+.tock.on {
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .viewport {
+    padding: 16px;
+  }
+}
