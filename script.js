@@ -6,6 +6,10 @@ const mobileHeight = 852;
 
 const setScale = () => {
   const isMobile = window.matchMedia("(max-width: 900px)").matches;
+  if (isMobile && !window.location.pathname.endsWith("mobile.html")) {
+    window.location.replace("mobile.html");
+    return;
+  }
   const scale = isMobile
     ? 1
     : Math.min(window.innerWidth / frameWidth, window.innerHeight / frameHeight);

@@ -1,0 +1,75 @@
+:root {
+  --bg: #1e1e1e;
+  --design-width: 393px;
+  --design-height: 852px;
+  --scale: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+body {
+  font-family: "Press Start 2P", monospace;
+  color: #ffffff;
+}
+
+.screen {
+  position: relative;
+  width: var(--design-width);
+  height: var(--design-height);
+  transform: scale(var(--scale));
+  transform-origin: top left;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%) scale(var(--scale));
+}
+
+.tick,
+.tock {
+  position: absolute;
+  left: 174px;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: -0.48px;
+  color: #555555;
+}
+
+.tick {
+  top: 276px;
+}
+
+.tock {
+  top: 292px;
+}
+
+.tick.on,
+.tock.on {
+  color: #ffffff;
+}
+
+.logo {
+  position: absolute;
+  left: 95px;
+  top: 335px;
+  width: 203px;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.builder {
+  position: absolute;
+  left: 178px;
+  top: 700px;
+  width: 36px;
+  height: auto;
+  image-rendering: pixelated;
+}
